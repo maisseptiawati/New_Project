@@ -1,7 +1,17 @@
-package tugasmais;
-class Lingkaran implements Poligon {
- // Deklarasi atribut
-  private double radius;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package bangundatar;
+
+/**
+ *
+ * @author Ma'is
+ */
+public class Lingkaran implements BangunDatar {
+    // Deklarasi atribut
+  private final double radius;
   private final double PI = 3.14;
 
   // Definisi method
@@ -16,14 +26,17 @@ class Lingkaran implements Poligon {
   }
 
   // Definisi method dari kelas induk
+  @Override
   public double Luas() {
     return (PI*radius*radius);
   }
 
+  @Override
   public double Keliling() {
     return (2*PI*radius);
   }
   
+  @Override
   public String displayInfo() {
     return ( "Lingkaran"
            + "\no Jari-jari: " + (float)getRadius()

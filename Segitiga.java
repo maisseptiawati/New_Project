@@ -1,7 +1,8 @@
-package tugasmais;
-class Segitiga implements Poligon {
- // Deklarasi atribut
-  private double alas, tinggi;
+package bangundatar;
+
+public class Segitiga implements BangunDatar {
+    // Deklarasi atribut
+  private final double alas, tinggi;
 
   // Definisi method
   // Konstruktor
@@ -20,18 +21,21 @@ class Segitiga implements Poligon {
   }
 
   // Definisi method dari kelas induk
+  @Override
   public double Luas() {
     return (alas*tinggi)/2;
   }
 
+  @Override
   public double Keliling() {
     double d;
     d = (double)Math.sqrt((alas*alas)+(tinggi*tinggi));
     return (alas+tinggi+d);
   }
   
+  @Override
   public String displayInfo() {
-    return ( "Segi Tiga"
+    return ( "Segitiga"
            + "\no Alas     : " + (float)getAlas()
            + "\no Tinggi   : " + (float)getTinggi()
            + "\no Luas     : " + (float)Luas()
